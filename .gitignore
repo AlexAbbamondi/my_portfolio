@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bf42b0a3f38f00fc02056ad511190a9621faae4c
 # Logs
 logs
 *.log
@@ -129,6 +132,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+<<<<<<< HEAD
 =======
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
@@ -154,3 +158,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 >>>>>>> Initial commit
+=======
+>>>>>>> bf42b0a3f38f00fc02056ad511190a9621faae4c
