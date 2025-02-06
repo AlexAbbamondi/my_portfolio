@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+
 import "../styles/experience.scss";
 
 const Experience = () => {
@@ -11,10 +13,24 @@ const Experience = () => {
   return (
     <section className="experience" id="Experience">
       <div className="experience-content">
-        <h2>Where I've Worked</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: .3 }}
+          viewport={{ once: true, amount: 0.7 }}
+        >
+          Where I've Worked
+        </motion.h2>
         <div className="job-flex-container">
           {jobs.map((job, index) => (
-            <div className={`job ${activeIndex === index ? 'open' : ''}`} key={index}>
+            <motion.div
+              className={`job ${activeIndex === index ? 'open' : ''}`} key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+
               <div
                 className="job-title-flex"
                 onClick={() => toggleAccordion(index)}
@@ -35,14 +51,12 @@ const Experience = () => {
                   </div>
                 </div>
               </div>
-
-              {/* Remove inline display control */}
               <ul className={`job-description-list ${activeIndex === index ? 'visible' : ''}`}>
                 {job.descriptions.map((desc, i) => (
                   <li key={i}>{desc}</li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

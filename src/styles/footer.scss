@@ -25,6 +25,10 @@ footer {
     order: 1;
     margin-bottom: 15px;
   }
+
+  .upper-footer-middle img {
+    cursor: pointer;
+  }
   
   .upper-footer-left p {
     max-width: 300px;
@@ -57,7 +61,7 @@ footer {
   .lower-footer-right {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
   }
   
   .upper-footer-right {

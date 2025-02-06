@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 
 import githubIcon from "../assets/images/github-white.svg";
 import linkedinIcon from "../assets/images/linkedin.svg";
@@ -10,15 +10,17 @@ import Resume from "../assets/pdf/Web_Developer_Resume.pdf";
 
 import '../styles/footer.scss';
 
-const Footer = () => {
+
+import { HashLink as RouterLink } from 'react-router-hash-link';
+
+const Footer = ({ navLinks }) => {
   const year = new Date().getFullYear();
-  
-  const navLinks = [
-    { to: "Skills", offset: -120 },
-    { to: "Experience", offset: -70 },
-    { to: "Projects", offset: -70 },
-    { to: "Contact", offset: -70 }
-  ];
+
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -100; // Adjust the offset value as needed
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+  };
 
   return (
     <footer className="footer" id="Footer">
@@ -30,7 +32,15 @@ const Footer = () => {
             <img src={signatureImage} alt="Signature" width="211" height="55" />
           </div>
           <div className="upper-footer-middle">
-            <img src={Logo} alt="" width="100" height="100" />
+            <ScrollLink
+              to="Hero"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              offset={-70} // Offset can be adjusted based on your layout
+            >
+              <img src={Logo} alt="" width="150" height="150" />
+            </ScrollLink>
           </div>
           <div className="upper-footer-right">
             <nav>
@@ -38,16 +48,9 @@ const Footer = () => {
               <ul>
                 {navLinks.map(link => (
                   <li key={link.to}>
-                    <Link
-                      activeClass="active"
-                      to={link.to}
-                      spy={true}
-                      smooth={true}
-                      offset={link.offset}
-                      duration={500}
-                    >
-                      {link.to}
-                    </Link>
+                    <RouterLink smooth to={link.to} scroll={scrollWithOffset}>
+                      {link.to.replace('/', '').replace('#', '')}
+                    </RouterLink>
                   </li>
                 ))}
               </ul>
@@ -60,7 +63,7 @@ const Footer = () => {
           </div>
           <div className="lower-footer-right">
             <a href="https://www.linkedin.com/in/alexabbamondi/" aria-label="LinkedIn">
-              <img src={linkedinIcon} alt="LinkedIn" width="25" height="25" />
+              <img src={linkedinIcon} alt="LinkedIn" width="35" height="35" />
             </a>
             <a href="https://github.com/AlexAbbamondi/" aria-label="GitHub">
               <img src={githubIcon} alt="GitHub" width="30" height="30" />

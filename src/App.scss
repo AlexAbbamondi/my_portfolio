@@ -53,8 +53,7 @@ ul {
 }
 
 .logo {
-  font-size: 24px;
-  color: #fff;
+  cursor: pointer;
 }
 
 .navbar {
@@ -353,8 +352,6 @@ ul {
     border-color: var(--secondary-accent-color);
   }
 
-  
-
   .hero-content {
     padding: 125px 15px 0;
   }
@@ -405,4 +402,13 @@ ul {
   .skill p:first-of-type {
     height: 135px;
   }
+
+  // .skill {
+  //   transition: 0.3s;
+  // }
+
+  // .skill:hover {
+  //   transform: scale(1.05);
+  //   transition: 0.3s;
+  // }
 }

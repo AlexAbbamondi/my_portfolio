@@ -21,6 +21,11 @@ const ProjectsSection = styled.section`
         width: 100%;
         justify-content: center;
     }
+    @media screen and (min-width: 1000px) {
+        .project {
+            width: 23%;
+        }
+    }
 `;
 
 

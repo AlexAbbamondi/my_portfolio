@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
 import HTML from "../assets/images/skills/html.svg"
 import CSS from "../assets/images/skills/css.svg"
@@ -36,7 +37,14 @@ const Skills = () => {
     return (
         <section className='skills' id="Skills">
             <div className="skills-content">
-                <div className="skill featured-skill">
+
+                <motion.div
+                    className="skill featured-skill"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 1 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                >
                     <div className="logo-container">
                         <img src={HTML} alt="" width="" height="" />
                         <img src={CSS} alt="" width="" height="" />
@@ -50,9 +58,15 @@ const Skills = () => {
                     <h3>Languages & Frameworks</h3>
                     <p>I have experience with a variety of web development technologies, both front-end and back-end, enabling me to build dynamic, responsive, and full-stack applications.</p>
                     <p className='skills-used'>HTML, CSS, JavaScript, React, Node.js, PHP, Python, Java, C#, MySQL, MongoDB</p>
-                </div>
+                </motion.div>
                 <div className="skills-flex-container">
-                    <div className="skill">
+                <motion.div
+                    className="skill"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                >
                         <div className="logo-container">
                             <img src={wordpress} alt="" width="" height="" />
                             <img src={woocommerce} alt="" width="" height="" />
@@ -64,8 +78,14 @@ const Skills = () => {
                         <h3>CMS & Tools</h3>
                         <p>I leverage a variety of content management systems (CMS) and tools to streamline development, enhance workflow efficiency, and optimize web performance.</p>
                         <p className='skills-used'>WordPress, WooCommerce, Git, Hugo, Cloudflare</p>
-                    </div>
-                    <div className="skill">
+                    </motion.div>
+                    <motion.div
+                    className="skill"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: .2 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                >
                         <div className="logo-container">
                             <img src={aws} alt="" width="" height="" />
                             <img src={ec2} alt="" width="" height="" />
@@ -77,8 +97,14 @@ const Skills = () => {
                         <h3>SEO</h3>
                         <p>I have experience in optimizing websites to improve their search engine visibility, user experience, and overall performance.</p>
                         <p className='skills-used'>Technical SEO, Schemas, SEMrush, Ahrefs, GA, Screaming Frog, GSC</p>
-                    </div>
-                    <div className="skill">
+                    </motion.div>
+                    <motion.div
+                    className="skill"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: .4 }}
+                    viewport={{ once: true, amount: 0.7 }}
+                >
                         <div className="logo-container">
                             <img src={ga4} alt="" width="" height="" />
                             <img src={gsc} alt="" width="" height="" />
@@ -91,7 +117,7 @@ const Skills = () => {
                         <h3>Cloud</h3>
                         <p>I have hands-on experience with Amazon Web Services (AWS), utilizing a range of cloud computing services to deploy, manage, and scale web applications and infrastructure efficiently.</p>
                         <p className='skills-used'>AWS (EC2, S3, RDS, LightSail, CloudFront)</p>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
