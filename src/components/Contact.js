@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { validateEmail, validateName, validateForm } from '../utils/validation';
+import { motion } from 'framer-motion';
 
 import '../styles/contact.scss'
 
@@ -44,12 +45,24 @@ const Contact = () => {
     <section className="contact" id="Contact">
       <div className="contact-content">
         <div className="contact-flex-container">
-          <div className="contact-text-container">
+          <motion.div
+            className="contact-text-container"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: .1 }}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>Let’s Collaborate to Create a Seamless, High-Performing Web Experience.</h2>
             <p>Get in touch to discuss your project! Whether you need front-end development, responsive web design, or SEO optimization, I’m here to help. Fill out the form below, and I’ll get back to you as soon as possible. Let's bring your vision to life!</p>
-          </div>
+          </motion.div>
 
-          <div className="contact-form-container">
+          <motion.div
+            className="contact-form-container"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: .3 }}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <form onSubmit={handleSubmit}>
               <h3>Connect With Me</h3>
               <div className="input-field">
@@ -78,13 +91,13 @@ const Contact = () => {
 
               <div className="input-field">
                 <label htmlFor="message">Message</label>
-                <textarea id="message" name="message"/>
+                <textarea id="message" name="message" />
               </div>
 
               <input type="submit" value="Send" id="Submit" />
               <p>I respect your privacy. Your information is used solely to respond to your inquiry.</p>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

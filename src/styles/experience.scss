@@ -184,5 +184,20 @@
     .job-description-list {
       margin-left: 5.75rem;
     }
+
+    .job-accordian-icon:hover {
+      border-color: var(--secondary-accent-color);
+    }
+  
+    .job-accordian-icon,
+    .job-accordian-icon .bar,
+    .job-accordian-icon:hover,
+    .job-accordian-icon:hover .bar {
+      transition: 0.7s;
+    }
+  
+    .job-accordian-icon:hover .bar {
+      background-color: var(--secondary-accent-color);
+    }
   }
   

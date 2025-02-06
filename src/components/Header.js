@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 import Arrow from "../assets/images/up-arrow.png";
 import Resume from "../assets/pdf/Web_Developer_Resume.pdf";
-import Logo from "../assets/images/Logo.png"
+import Logo from "../assets/images/Logo.png";
 
 const StyledHeader = styled.header`
   background-color: ${(props) => (props.isspecificpage ? 'var(--hero-navbar-bg)' : '')};
@@ -26,7 +27,7 @@ const Header = ({ onToggle, showNavbar }) => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setNavBackground(scrollPosition > 50);
-      setShowScrollTopButton(scrollPosition > window.innerHeight);
+      setShowScrollTopButton(scrollPosition > window.innerHeight * 0.7);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -41,43 +42,72 @@ const Header = ({ onToggle, showNavbar }) => {
   ];
 
   return (
-    <StyledHeader 
-  className={`header ${navBackground ? 'scrolled' : ''}`} 
-  isspecificpage={isspecificpage ? 'true' : undefined}
->
-
+    <StyledHeader
+      className={`header ${navBackground ? 'scrolled' : ''}`}
+      isspecificpage={isspecificpage}
+    >
       <div className="header-container">
-        <div className="logo">
-        <img src={Logo} alt="" width="60" height="60" />
-        </div>
+        <motion.div
+          className="logo"
+          initial={{ opacity: 0, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          <ScrollLink
+            to="Hero"
+            spy={true}
+            smooth={true}
+            duration={1000}
+            offset={-70}
+          >
+            <img src={Logo} alt="Logo" width="65" height="65" />
+          </ScrollLink>
+        </motion.div>
+
         <nav className={`navbar ${showNavbar ? 'active' : ''}`}>
           <ul className="nav-links">
-            {navLinks.map((link) => (
-              <li key={link.to}>
-                <Link
-                  activeClass="active"
-                  to={link.to}
-                  spy={true}
-                  smooth={true}
-                  offset={link.offset}
-                  duration={1000}
-                  onClick={handleNavLinkClick}
-                >
-                  {link.to}
-                </Link>
-              </li>
+            {navLinks.map((link, index) => (
+              <motion.div
+                key={link.to} // Added key prop here
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                <li>
+                  <ScrollLink
+                    activeClass="active"
+                    to={link.to}
+                    spy={true}
+                    smooth={true}
+                    offset={link.offset}
+                    duration={1000}
+                    onClick={handleNavLinkClick}
+                  >
+                    {link.to}
+                  </ScrollLink>
+                </li>
+              </motion.div>
             ))}
-            <li>
+            <motion.li
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: .8 }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               <a className="button header-button" href={Resume} rel="noopener noreferrer" target="_blank">RESUME</a>
-            </li>
+            </motion.li>
           </ul>
         </nav>
+
         <div id="hamburger" className={`hamburger ${showNavbar ? 'toggle' : ''}`} onClick={onToggle}>
           <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
         </div>
       </div>
+
       {showScrollTopButton && (
         <button className="back-to-top" onClick={handleScrollToTop}>
           <img src={Arrow} alt="Back to top" width="30" height="30" />
