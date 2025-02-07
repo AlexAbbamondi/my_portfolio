@@ -77,7 +77,9 @@ const Projects = () => {
           <p>I have worked on a variety of projects, including custom WordPress websites, dynamic React applications, and Python-based apps for tasks like data processing and backend development.</p>
           <p>My experience spans building responsive, user-friendly sites, creating interactive web apps, and developing scalable solutions tailored to client needs.</p>
           <p>These are some of the recent projects I have worked on.</p>
+          <div className='projects-page-link-container'>
           <Link to="/projects">View more projects ⟶</Link>
+          </div>
         </motion.div>
 
         <div className="projects-flex-container">

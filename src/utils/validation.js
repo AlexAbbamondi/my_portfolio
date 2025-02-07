@@ -7,6 +7,14 @@ export function validateName(name) {
     return name.trim().length > 0;
 }
 
+export function validateMessage(textareaContent, minLength = 1) {
+    return textareaContent.trim().length >= minLength;
+}
+
 export function validateForm(fields) {
-    return validateEmail(fields.email) && validateName(fields.name);
+    return (
+        validateEmail(fields.email) &&
+        validateName(fields.name) &&
+        validateMessage(fields.textareaContent)
+    );
 }

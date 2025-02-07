@@ -4,7 +4,7 @@ import ProjectsSection from './ProjectsPageStyle';
 import Banyan from '../../assets/images/projects/Banyan-Treatment-Center.jpg.webp';
 import SanMelix from '../../assets/images/projects/SanMelix.jpg';
 import MesoGuide from '../../assets/images/projects/Mesothelioma-Guide.jpg';
-import CCLA from '../../assets/images/projects/CCLA.jpg';
+import CCLA from '../../assets/images/projects/ccla.jpg';
 import RedditMonitor from '../../assets/images/projects/reddit-monitor.jpg';
 import BarcodeGenerator from '../../assets/images/projects/barcode-generator.jpg';
 import PyCrawler from '../../assets/images/projects/PyCrawler.jpg';
@@ -27,31 +27,31 @@ const projectsData = [
     image: Banyan,
     title: "Banyan Treatment Center",
     description: "Substance abuse and mental health treatment facility",
-    link: ""
+    link: "https://www.banyantreatmentcenter.com/"
   },
   {
     image: SanMelix,
     title: "beeCure",
     description: "A skincare company offering buckwheat honey products to repair and strengthen skin",
-    link: ""
+    link: "https://beecure.com/"
   },
   {
     image: BCBHLaw,
     title: "BCBH Law",
     description: "A National Plaintiffs Law Firm Dedicated to Helping the Victims of Asbestos Exposure",
-    link: ""
+    link: "https://www.bcbhlaw.com/"
   },
   {
     image: CCLA,
     title: "Community Christian Legal Aid",
     description: "Faith-based nonprofit providing legal assistance to underserved individuals",
-    link: ""
+    link: "https://cclegalaid.org/"
   },
   {
     image: RedditMonitor,
     title: "Reddit Web Scraper",
     description: "Python script that monitors Reddit for posts containing specified keywords and sends email notifications",
-    link: ""
+    link: "https://github.com/AlexAbbamondi/Reddit-Monitor"
   },
   {
     image: BarcodeGenerator,
