@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProjectsPage from './components/pages/ProjectsPage';
+import PrivacyPolicy from './components/pages/PrivacyPolicyPage';
 
 import './App.scss';
 
@@ -55,6 +56,7 @@ function App() {
             </>
           } />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </main>
       <Footer navLinks={getNavLinks()} />

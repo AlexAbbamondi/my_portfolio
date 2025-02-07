@@ -8,7 +8,7 @@ const HeaderWrapper = ({ onToggle, showNavbar }) => {
 
     return (
         <>
-            {location.pathname === "/projects" ? (
+            {(location.pathname === "/projects" || location.pathname === "/privacy-policy")? (
                 <ProjectHeader onToggle={onToggle} showNavbar={showNavbar} />
             ) : (
                 <Header onToggle={onToggle} showNavbar={showNavbar} />

@@ -60,15 +60,41 @@
   margin-bottom: 18px;
 }
 
-.projects-text-container a {
+.projects-text-container a,
+.projects-text-container a:hover {
+  transition: .3s;
+}
+
+// .projects-text-container a {
+//   color: var(--secondary-accent-color);
+//   font-size: 18px;
+//   font-weight: 500;
+//   background: linear-gradient(to bottom, var(--secondary-accent-color) 0%, var(--secondary-accent-color) 100%);
+//   background-position: 0 100%;
+//   background-repeat: repeat-x;
+//   background-size: 2px 2px;
+// }
+
+.projects-page-link-container {
+  width: fit-content;
+}
+
+.projects-page-link-container a {
   color: var(--secondary-accent-color);
   font-size: 18px;
   font-weight: 500;
-  background: linear-gradient(to bottom, var(--secondary-accent-color) 0%, var(--secondary-accent-color) 100%);
-  background-position: 0 100%;
+  text-decoration: none; /* Remove default underline */
+  background-image: linear-gradient(to bottom, var(--secondary-accent-color) 0%, var(--secondary-accent-color) 100%);
+  background-position: 0 100%; /* Keep the gradient at the bottom */
   background-repeat: repeat-x;
-  background-size: 2px 2px;
-  transition: .3s;
+  background-size: 100% 2px; /* Ensure the gradient is only 2px high */
+  transition: color 0.05s, background-image 0.3s ease;
+}
+
+.projects-page-link-container a:hover {
+  color: var(--accent-color); /* Change text color */
+  transition: color 0.05s, background-image 0.3s ease;
+  background-image: linear-gradient(to bottom, var(--accent-color) 0%, var(--accent-color) 100%); /* Change gradient color */
 }
 
 @media screen and (min-width: 768px) {

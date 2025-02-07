@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 import githubIcon from "../assets/images/github-white.svg";
 import linkedinIcon from "../assets/images/linkedin.svg";
@@ -59,13 +60,13 @@ const Footer = ({ navLinks }) => {
         </div>
         <div className="lower-footer">
           <div className="lower-footer-left">
-            <p>Alex Abbamondi • © {year} • All Rights Reserved • <a href="#">Privacy Policy</a></p>
+            <p>Alex Abbamondi • © {year} • All Rights Reserved • <Link to="/privacy-policy">Privacy Policy</Link></p>
           </div>
           <div className="lower-footer-right">
-            <a href="https://www.linkedin.com/in/alexabbamondi/" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/alexabbamondi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <img src={linkedinIcon} alt="LinkedIn" width="35" height="35" />
             </a>
-            <a href="https://github.com/AlexAbbamondi/" aria-label="GitHub">
+            <a href="https://github.com/AlexAbbamondi/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <img src={githubIcon} alt="GitHub" width="30" height="30" />
             </a>
           </div>

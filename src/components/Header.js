@@ -14,7 +14,7 @@ const StyledHeader = styled.header`
 
 const Header = ({ onToggle, showNavbar }) => {
   const location = useLocation();
-  const isspecificpage = location.pathname === '/projects';
+  const isspecificpage = location.pathname === '/projects' || location.pathname === '/privacy-policy';
 
   const [navBackground, setNavBackground] = useState(false);
   const [showScrollTopButton, setShowScrollTopButton] = useState(false);
@@ -43,9 +43,9 @@ const Header = ({ onToggle, showNavbar }) => {
 
   return (
     <StyledHeader
-      className={`header ${navBackground ? 'scrolled' : ''}`}
-      isspecificpage={isspecificpage}
-    >
+    className={`header ${navBackground ? 'scrolled' : ''}`}
+    isspecificpage={isspecificpage ? true : undefined} // Pass undefined if false
+  >
       <div className="header-container">
         <motion.div
           className="logo"

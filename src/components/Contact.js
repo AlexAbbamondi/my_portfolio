@@ -1,14 +1,22 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import { validateEmail, validateName, validateForm } from '../utils/validation';
+import { validateEmail, validateName, validateMessage } from '../utils/validation';
 import { motion } from 'framer-motion';
 
-import '../styles/contact.scss'
+import CheckMark from '../assets/images/checkmark.svg'
+
+import '../styles/contact.scss';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '' });
+  const form = useRef();
+  const [formData, setFormData] = useState({ user_name: '', user_email: '', message: '' });
   const [errors, setErrors] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
+  useEffect(() => {
+    emailjs.init(process.env.REACT_APP_KEY);
+  }, []);
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -21,23 +29,35 @@ const Contact = () => {
     e.preventDefault();
     const validationErrors = {};
 
-    if (!validateName(formData.name)) {
-      validationErrors.name = 'Invalid Name';
+    if (!validateName(formData.user_name)) {
+      validationErrors.user_name = 'Invalid Name';
     }
-    if (!validateEmail(formData.email)) {
-      validationErrors.email = 'Invalid Email';
+    if (!validateEmail(formData.user_email)) {
+      validationErrors.user_email = 'Invalid Email';
+    }
+    if (!validateMessage(formData.message)) {
+      validationErrors.message = 'Message Required';
     }
 
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
-      // Use emailjs to send the email
-      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
-        .then((result) => {
-          console.log('Email successfully sent!', result.text);
-        }, (error) => {
-          console.log('Failed to send email. Error:', error.text);
-        });
+      emailjs.sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_KEY // Directly use the public key here
+      )
+      .then(
+        () => {
+          setFormData({ user_name: '', user_email: '', message: '' });
+          setErrors('');
+          setIsSubmitted(true); // Set isSubmitted to true on successful submission
+        },
+        (error) => {
+          setErrors('Something went wrong. Please try again later.');
+        }
+      );
     }
   };
 
@@ -49,7 +69,7 @@ const Contact = () => {
             className="contact-text-container"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: .1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true, amount: 0.7 }}
           >
             <h2>Let’s Collaborate to Create a Seamless, High-Performing Web Experience.</h2>
@@ -60,43 +80,60 @@ const Contact = () => {
             className="contact-form-container"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: .3 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true, amount: 0.7 }}
           >
-            <form onSubmit={handleSubmit}>
-              <h3>Connect With Me</h3>
-              <div className="input-field">
-                <label htmlFor="name">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                />
-                {errors.name && <span style={{ color: 'red' }}>{errors.name}</span>}
-              </div>
+            {!isSubmitted ? (
+              <form id="contact-form" onSubmit={handleSubmit} ref={form}>
+                <h3>Connect With Me</h3>
+                <div className="input-field">
+                  <label htmlFor="user_name">Name</label>
+                  <input
+                    type="text"
+                    name="user_name"
+                    id="user_name"
+                    value={formData.user_name}
+                    onChange={handleChange}
+                  />
+                  {errors.user_name && <span style={{ color: 'red', fontWeight: '500' }}>{errors.user_name}</span>}
+                </div>
 
-              <div className="input-field">
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-                {errors.email && <span style={{ color: 'red' }}>{errors.email}</span>}
-              </div>
+                <div className="input-field">
+                  <label htmlFor="user_email">Email</label>
+                  <input
+                    type="email"
+                    name="user_email"
+                    id="user_email"
+                    value={formData.user_email}
+                    onChange={handleChange}
+                  />
+                  {errors.user_email && <span style={{ color: 'red', fontWeight: '500' }}>{errors.user_email}</span>}
+                </div>
 
-              <div className="input-field">
-                <label htmlFor="message">Message</label>
-                <textarea id="message" name="message" />
-              </div>
+                <div className="input-field">
+                  <label htmlFor="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                  />
+                  {errors.message && <span style={{ color: 'red', fontWeight: '500' }}>{errors.message}</span>}
+                </div>
 
-              <input type="submit" value="Send" id="Submit" />
-              <p>I respect your privacy. Your information is used solely to respond to your inquiry.</p>
-            </form>
+                <input type="submit" value="Send" id="Submit" />
+                <p>I respect your privacy. Your information is used solely to respond to your inquiry.</p>
+              </form>
+            ) : (
+              <div className="success-message">
+                  <img src={CheckMark} alt='' width='65' height='65'/>
+                <div className="success-message-text">
+                  <h3>Thank You!</h3>
+                  <p>Your message has been sent successfully. I'll get back to you soon.</p>
+                </div>
+
+              </div>
+            )}
           </motion.div>
         </div>
       </div>
