@@ -75,6 +75,7 @@ export const PrivacyPolicy = () => {
                 </ul>
             </div>
         </section>
+        
     )
 }
 

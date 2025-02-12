@@ -43,7 +43,7 @@ const Skills = () => {
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1 }}
-                    viewport={{ once: true, amount: 0.5 }}
+                    viewport={{ once: true, amount: 0.1 }}
                 >
                     <div className="logo-container">
                         <img src={HTML} alt="" width="" height="" />
@@ -65,7 +65,7 @@ const Skills = () => {
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0 }}
-                    viewport={{ once: true, amount: 0.5 }}
+                    viewport={{ once: true, amount: 0.2 }}
                 >
                         <div className="logo-container">
                             <img src={wordpress} alt="" width="" height="" />

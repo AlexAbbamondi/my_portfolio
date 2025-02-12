@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 import HeaderWrapper from './components/HeaderWrapper'; // Import the HeaderWrapper
 import Hero from './components/Hero';

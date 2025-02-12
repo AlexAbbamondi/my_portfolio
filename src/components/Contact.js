@@ -70,10 +70,11 @@ const Contact = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true, amount: 0.7 }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             <h2>Let’s Collaborate to Create a Seamless, High-Performing Web Experience.</h2>
-            <p>Get in touch to discuss your project! Whether you need front-end development, responsive web design, or SEO optimization, I’m here to help. Fill out the form below, and I’ll get back to you as soon as possible. Let's bring your vision to life!</p>
+            <p>Get in touch to discuss your project! Whether you need front-end development, responsive web design, or SEO optimization, I'’'m here to help.</p>
+            <p>Fill out the form, and I'll get back to you as soon as possible. Let's bring your vision to life!</p>
           </motion.div>
 
           <motion.div
@@ -81,7 +82,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true, amount: 0.7 }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             {!isSubmitted ? (
               <form id="contact-form" onSubmit={handleSubmit} ref={form}>
