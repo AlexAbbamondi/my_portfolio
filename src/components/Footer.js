@@ -30,7 +30,7 @@ const Footer = ({ navLinks }) => {
           <div className="upper-footer-left">
             <p>Alex Abbamondi is a web developer and SEO expert specializing in WordPress and React.</p>
             <a className="button" href={Resume} rel="noopener noreferrer" target="_blank">RESUME</a>
-            <img src={signatureImage} alt="Signature" width="211" height="55" />
+            <img src={signatureImage} alt="Alex Abbamondi Signature" width="211" height="55" />
           </div>
           <div className="upper-footer-middle">
             <ScrollLink
@@ -40,7 +40,7 @@ const Footer = ({ navLinks }) => {
               duration={1000}
               offset={-70} // Offset can be adjusted based on your layout
             >
-              <img src={Logo} alt="" width="150" height="150" />
+              <img src={Logo} alt="Logo" width="150" height="150" />
             </ScrollLink>
           </div>
           <div className="upper-footer-right">

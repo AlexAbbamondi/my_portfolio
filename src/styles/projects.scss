@@ -1,7 +1,10 @@
 .projects-flex-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 30px;
+  width: 100%;
 }
 
 .project {
@@ -9,6 +12,7 @@
   border-radius: 3px;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1), 1px 1px 3px rgba(0, 0, 0, 0.08);
   position: relative;
+  width: 100%;
   max-width: 340px;
   height: 250px;
   background-repeat: no-repeat;
@@ -42,12 +46,12 @@
 }
 
 .overlay-text h3 {
-    color: #fff;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.2;
-    margin-bottom: 0;
-    text-align: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .overlay-text p {
@@ -62,18 +66,8 @@
 
 .projects-text-container a,
 .projects-text-container a:hover {
-  transition: .3s;
+  transition: 0.3s;
 }
-
-// .projects-text-container a {
-//   color: var(--secondary-accent-color);
-//   font-size: 18px;
-//   font-weight: 500;
-//   background: linear-gradient(to bottom, var(--secondary-accent-color) 0%, var(--secondary-accent-color) 100%);
-//   background-position: 0 100%;
-//   background-repeat: repeat-x;
-//   background-size: 2px 2px;
-// }
 
 .projects-page-link-container {
   width: fit-content;
@@ -84,7 +78,11 @@
   font-size: 18px;
   font-weight: 500;
   text-decoration: none; /* Remove default underline */
-  background-image: linear-gradient(to bottom, var(--secondary-accent-color) 0%, var(--secondary-accent-color) 100%);
+  background-image: linear-gradient(
+    to bottom,
+    var(--secondary-accent-color) 0%,
+    var(--secondary-accent-color) 100%
+  );
   background-position: 0 100%; /* Keep the gradient at the bottom */
   background-repeat: repeat-x;
   background-size: 100% 2px; /* Ensure the gradient is only 2px high */
@@ -94,23 +92,35 @@
 .projects-page-link-container a:hover {
   color: var(--accent-color); /* Change text color */
   transition: color 0.05s, background-image 0.3s ease;
-  background-image: linear-gradient(to bottom, var(--accent-color) 0%, var(--accent-color) 100%); /* Change gradient color */
+  background-image: linear-gradient(
+    to bottom,
+    var(--accent-color) 0%,
+    var(--accent-color) 100%
+  ); /* Change gradient color */
+}
+
+.projects-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .projects-content {
     display: flex;
-    gap: 30px; /* Added to align with larger screens adjustments */
+    gap: 0;
+    justify-content: space-between;
   }
 
   .projects-text-container {
-    width: 33.33%;
+    width: 35%;
   }
 
   .projects-flex-container {
-    width: 66.66%;
+    width: 64%;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: end;
   }
 
   .project {
@@ -118,12 +128,12 @@
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1025px) {
   .overlay-text {
     opacity: 0;
     transition: opacity 0.3s ease;
   }
-  
+
   .project:hover .overlay-text {
     opacity: 1;
   }

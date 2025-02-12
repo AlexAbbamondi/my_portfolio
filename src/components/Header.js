@@ -43,9 +43,9 @@ const Header = ({ onToggle, showNavbar }) => {
 
   return (
     <StyledHeader
-    className={`header ${navBackground ? 'scrolled' : ''}`}
-    isspecificpage={isspecificpage ? true : undefined} // Pass undefined if false
-  >
+      className={`header ${navBackground ? 'scrolled' : ''}`}
+      isspecificpage={isspecificpage ? true : undefined} // Pass undefined if false
+    >
       <div className="header-container">
         <motion.div
           className="logo"

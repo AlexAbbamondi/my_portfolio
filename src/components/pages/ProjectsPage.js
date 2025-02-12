@@ -15,55 +15,72 @@ import CCSearch from '../../assets/images/projects/cancer-center-search.png';
 import TechBlog from '../../assets/images/projects/tech-blog.png';
 
 import newTab from "../../assets/images/new-tab.svg";
+import GitHub from '../../assets/images/github-white.svg'
 
 const projectsData = [
   {
     image: MesoGuide,
     title: "Mesothelioma Guide",
     description: "Asbestos-related cancer treatment and support provider",
-    link: ""
+    link: "",
+    icon: newTab,
+    altText: "New Tab Icon"
   },
   {
     image: Banyan,
     title: "Banyan Treatment Center",
     description: "Substance abuse and mental health treatment facility",
-    link: "https://www.banyantreatmentcenter.com/"
+    link: "https://www.banyantreatmentcenter.com/",
+    icon: newTab,
+    altText: "New Tab Icon"
   },
   {
     image: SanMelix,
     title: "beeCure",
     description: "A skincare company offering buckwheat honey products to repair and strengthen skin",
-    link: "https://beecure.com/"
+    link: "https://beecure.com/",
+    icon: newTab,
+    altText: "New Tab Icon"
   },
   {
     image: BCBHLaw,
     title: "BCBH Law",
     description: "A National Plaintiffs Law Firm Dedicated to Helping the Victims of Asbestos Exposure",
-    link: "https://www.bcbhlaw.com/"
+    link: "https://www.bcbhlaw.com/",
+    icon: newTab,
+    altText: "New Tab Icon"
   },
   {
     image: CCLA,
     title: "Community Christian Legal Aid",
     description: "Faith-based nonprofit providing legal assistance to underserved individuals",
-    link: "https://cclegalaid.org/"
+    link: "https://cclegalaid.org/",
+    icon: newTab,
+    altText: "New Tab Icon"
   },
   {
     image: RedditMonitor,
     title: "Reddit Web Scraper",
     description: "Python script that monitors Reddit for posts containing specified keywords and sends email notifications",
-    link: "https://github.com/AlexAbbamondi/Reddit-Monitor"
+    link: "https://github.com/AlexAbbamondi/Reddit-Monitor",
+    icon: GitHub,
+    altText: "Github Icon"
   },
   {
     image: BarcodeGenerator,
     title: "UPC-A barcode Generator",
-    description: "Python script used to generate a UPC-A barcode image from a given 12-digit numerical string",
-    link: ""
+    description: "Python script used to generate a UPC-A barcode",
+    link: "",
+    icon: GitHub,
+    altText: "Github Icon"
   },
   {
     image: PyCrawler,
     title: "PyCrawler",
     description: "Python Website Crawler for locating HTML Elements, Media, and Links",
-    link: ""
+    link: "",
+    icon: GitHub,
+    altText: "Github Icon"
   },
   // {
   //   image: VACalc,
@@ -91,13 +108,13 @@ const projectsData = [
   // }
 ];
 
-const ProjectCard = ({ image, title, description, link }) => (
+const ProjectCard = ({ image, title, description, link, icon, altText }) => (
   <div className="project" style={{ backgroundImage: `url(${image})` }}>
-    <a href={link}>
+    <a href={link} target="_blank" rel='noreferrer noopener'>
       <div className="overlay-text">
         <h3>{title}</h3>
         <p>{description}</p>
-        <img src={newTab} alt="" width="35" height="35" />
+        <img src={icon} alt={altText} width="35" height="35" />
       </div>
     </a>
   </div>
