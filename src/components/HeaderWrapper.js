@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from './Header';
 import ProjectHeader from './ProjectsHeader';
@@ -6,9 +6,17 @@ import ProjectHeader from './ProjectsHeader';
 const HeaderWrapper = ({ onToggle, showNavbar }) => {
     const location = useLocation();
 
+    // Use useEffect to detect location change and close the navbar
+    useEffect(() => {
+        if (showNavbar) {
+            onToggle();
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [location.pathname]);
+
     return (
         <>
-            {(location.pathname === "/projects" || location.pathname === "/privacy-policy")? (
+            {(location.pathname === "/projects" || location.pathname === "/privacy-policy") ? (
                 <ProjectHeader onToggle={onToggle} showNavbar={showNavbar} />
             ) : (
                 <Header onToggle={onToggle} showNavbar={showNavbar} />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
 
@@ -15,6 +16,7 @@ import '../styles/footer.scss';
 import { HashLink as RouterLink } from 'react-router-hash-link';
 
 const Footer = ({ navLinks }) => {
+  const location = useLocation();
   const year = new Date().getFullYear();
 
   const scrollWithOffset = (el) => {
@@ -23,18 +25,29 @@ const Footer = ({ navLinks }) => {
     window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
   };
 
+  const getScrollTarget = () => {
+    switch (location.pathname) {
+        case '/projects':
+            return 'ProjectsPage';
+        case '/privacy-policy':
+            return 'PrivacyPolicy';
+        default:
+            return 'Hero';
+    }
+  };
+
   return (
     <footer className="footer" id="Footer">
       <div className="footer-container">
         <div className="upper-footer">
           <div className="upper-footer-left">
-            <p>Alex Abbamondi is a web developer and SEO expert specializing in WordPress and React.</p>
+            <p>Alex Abbamondi is a web developer and SEO expert specializing in WordPress development and techinal SEO.</p>
             <a className="button" href={Resume} rel="noopener noreferrer" target="_blank">RESUME</a>
             <img src={signatureImage} alt="Alex Abbamondi Signature" width="211" height="55" />
           </div>
           <div className="upper-footer-middle">
             <ScrollLink
-              to="Hero"
+              to={getScrollTarget()}
               spy={true}
               smooth={true}
               duration={1000}

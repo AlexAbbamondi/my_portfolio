@@ -68,9 +68,9 @@ const projectsData = [
   },
   {
     image: BarcodeGenerator,
-    title: "UPC-A barcode Generator",
+    title: "UPC-A Barcode Generator",
     description: "Python script used to generate a UPC-A barcode",
-    link: "",
+    link: "https://github.com/AlexAbbamondi/UPC-A_Barcode_Generator",
     icon: GitHub,
     altText: "Github Icon"
   },
@@ -78,34 +78,42 @@ const projectsData = [
     image: PyCrawler,
     title: "PyCrawler",
     description: "Python Website Crawler for locating HTML Elements, Media, and Links",
-    link: "",
+    link: "https://github.com/AlexAbbamondi/PyCrawler",
     icon: GitHub,
     altText: "Github Icon"
   },
-  // {
-  //   image: VACalc,
-  //   title: "VA Rating Calculator",
-  //   description: "This app helps users calculate combined and final disability ratings based on VA disability percentages",
-  //   link: ""
-  // },
-  // {
-  //   image: EverytownUSA,
-  //   title: "Everytown, USA",
-  //   description: "Interactive JavaScript map showcasing locations of asbestos exposure",
-  //   link: ""
-  // },
-  // {
-  //   image: CCSearch,
-  //   title: "Mesothelioma Treatment Center Locator",
-  //   description: "This app helps individuals with mesothelioma easily find specialized treatment centers near them",
-  //   link: ""
-  // },
-  // {
-  //   image: TechBlog,
-  //   title: "MVC Tech Blog",
-  //   description: "This Node.js app with Express lets logged in users view, create, edit, delete, and comment on blog posts",
-  //   link: ""
-  // }
+  {
+    image: VACalc,
+    title: "VA Rating Calculator",
+    description: "This app helps users calculate combined and final disability ratings based on VA disability percentages",
+    link: "https://www.mesotheliomaguide.com/veterans/va-benefits/va-disability-claims/#root",
+    icon: newTab,
+    altText: "New Tab Icon"
+  },
+  {
+    image: EverytownUSA,
+    title: "Everytown, USA",
+    description: "Interactive JavaScript map showcasing locations of asbestos exposure",
+    link: "https://www.mesotheliomaguide.com/mesothelioma/causes/asbestos/everytown-usa/",
+    icon: newTab,
+    altText: "New Tab Icon"
+  },
+  {
+    image: CCSearch,
+    title: "Mesothelioma Treatment Center Locator",
+    description: "This app helps individuals with mesothelioma easily find specialized treatment centers near them",
+    link: "https://www.mesotheliomaguide.com/cancer-centers/#root",
+    icon: newTab,
+    altText: "New Tab Icon"
+  },
+  {
+    image: TechBlog,
+    title: "MVC Tech Blog",
+    description: "This Node.js app with Express lets logged in users view, create, edit, delete, and comment on blog posts",
+    link: "https://github.com/AlexAbbamondi/MVC-Tech-Blog",
+    icon: GitHub,
+    altText: "Github Icon"
+  }
 ];
 
 const ProjectCard = ({ image, title, description, link, icon, altText }) => (
