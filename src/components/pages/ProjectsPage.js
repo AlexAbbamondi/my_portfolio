@@ -9,10 +9,10 @@ import RedditMonitor from '../../assets/images/projects/reddit-monitor.jpg';
 import BarcodeGenerator from '../../assets/images/projects/barcode-generator.jpg';
 import PyCrawler from '../../assets/images/projects/PyCrawler.jpg';
 import BCBHLaw from '../../assets/images/projects/bcbh-law.jpg';
-import VACalc from '../../assets/images/projects/VA-Rating-Calculator.png';
+import VACalc from '../../assets/images/projects/VA-Rating-Calculator.jpg';
 import EverytownUSA from '../../assets/images/projects/Everytown-USA.jpg';
-import CCSearch from '../../assets/images/projects/cancer-center-search.png';
-import TechBlog from '../../assets/images/projects/tech-blog.png';
+import CCSearch from '../../assets/images/projects/cancer-center-search.jpg';
+import TechBlog from '../../assets/images/projects/tech-blog.jpg';
 
 import newTab from "../../assets/images/new-tab.svg";
 import GitHub from '../../assets/images/github-white.svg'
@@ -36,7 +36,7 @@ const projectsData = [
   },
   {
     image: SanMelix,
-    title: "beeCure",
+    title: "BeeCure",
     description: "A skincare company offering buckwheat honey products to repair and strengthen skin",
     link: "https://beecure.com/",
     icon: newTab,
@@ -100,7 +100,7 @@ const projectsData = [
   },
   {
     image: CCSearch,
-    title: "Mesothelioma Treatment Center Locator",
+    title: "Treatment Center Locator",
     description: "This app helps individuals with mesothelioma easily find specialized treatment centers near them",
     link: "https://www.mesotheliomaguide.com/cancer-centers/#root",
     icon: newTab,
