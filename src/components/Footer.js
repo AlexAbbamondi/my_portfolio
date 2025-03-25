@@ -43,7 +43,7 @@ const Footer = ({ navLinks }) => {
           <div className="upper-footer-left">
             <p>Alex Abbamondi is a web developer and SEO expert specializing in WordPress development and techinal SEO.</p>
             <a className="button" href={Resume} rel="noopener noreferrer" target="_blank">RESUME</a>
-            <img src={signatureImage} alt="Alex Abbamondi Signature" width="211" height="55" />
+            <img src={signatureImage} alt="Alex Abbamondi Signature" width="211" height="55" loading="lazy" />
           </div>
           <div className="upper-footer-middle">
             <ScrollLink
@@ -53,7 +53,7 @@ const Footer = ({ navLinks }) => {
               duration={1000}
               offset={-70} // Offset can be adjusted based on your layout
             >
-              <img src={Logo} alt="Logo" width="150" height="150" />
+              <img src={Logo} alt="Logo" width="150" height="150" loading="lazy" />
             </ScrollLink>
           </div>
           <div className="upper-footer-right">
@@ -77,10 +77,10 @@ const Footer = ({ navLinks }) => {
           </div>
           <div className="lower-footer-right">
             <a href="https://www.linkedin.com/in/alexabbamondi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <img src={linkedinIcon} alt="LinkedIn" width="35" height="35" />
+              <img src={linkedinIcon} alt="LinkedIn" width="35" height="35" loading="lazy" />
             </a>
             <a href="https://github.com/AlexAbbamondi/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <img src={githubIcon} alt="GitHub" width="30" height="30" />
+              <img src={githubIcon} alt="GitHub" width="30" height="30" loading="lazy" />
             </a>
           </div>
         </div>
