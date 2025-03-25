@@ -16,7 +16,7 @@ const projectData = [
   {
     image: MesoGuide,
     title: "Mesothelioma Guide",
-    description: "Asbestos-related cancer treatment and support provider",
+    description: "Asbestos-related cancer treatment and support provider...",
     link: "",
     icon: newTab,
     altText: "New Tab Icon"
@@ -24,15 +24,15 @@ const projectData = [
   {
     image: Banyan,
     title: "Banyan Treatment Center",
-    description: "Substance abuse and mental health treatment facility",
+    description: "Substance abuse and mental health treatment facility...",
     link: "https://www.banyantreatmentcenter.com/",
     icon: newTab,
     altText: "New Tab Icon"
   },
   {
     image: SanMelix,
-    title: "beeCure",
-    description: "A skincare company offering buckwheat honey products to repair and strengthen skin",
+    title: "BeeCure",
+    description: "A skincare company offering buckwheat honey products to repair and strengthen skin...",
     link: "https://beecure.com/",
     icon: newTab,
     altText: "New Tab Icon"
@@ -40,7 +40,7 @@ const projectData = [
   {
     image: RedditMonitor,
     title: "Reddit Web Scraper",
-    description: "Python script that monitors Reddit for posts containing specified keywords and sends email notifications",
+    description: "Python script that monitors Reddit for posts containing specified keywords...",
     link: "https://github.com/AlexAbbamondi/Reddit-Monitor",
     icon: GitHub,
     altText: "Github Icon"
