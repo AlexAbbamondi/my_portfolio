@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 import Banyan from '../assets/images/projects/Banyan-Treatment-Center.jpg.webp';
 import SanMelix from '../assets/images/projects/SanMelix.jpg';
-import MesoGuide from '../assets/images/projects/Mesothelioma-Guide.jpg';
-import RedditMonitor from '../assets/images/projects/reddit-monitor.jpg'
+import MesoGuide from '../assets/images/projects/Mesothelioma-Guide.png';
+import RedditMonitor from '../assets/images/projects/reddit-monitor.png'
 
 import newTab from "../assets/images/new-tab.svg";
 import GitHub from '../assets/images/github-white.svg'
@@ -61,7 +61,7 @@ const Project = ({ title, description, image, link, index, icon, altText }) => (
       <div className="overlay-text">
         <h3>{title}</h3>
         <p>{description}</p>
-        <img src={icon} alt={altText} width="35" height="35" />
+        <img src={icon} alt={altText} width="35" height="35" loading="lazy" />
       </div>
     </a>
 

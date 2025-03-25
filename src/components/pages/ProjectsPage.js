@@ -3,16 +3,16 @@ import ProjectsSection from './ProjectsPageStyle';
 
 import Banyan from '../../assets/images/projects/Banyan-Treatment-Center.jpg.webp';
 import SanMelix from '../../assets/images/projects/SanMelix.jpg';
-import MesoGuide from '../../assets/images/projects/Mesothelioma-Guide.jpg';
-import CCLA from '../../assets/images/projects/ccla.jpg';
-import RedditMonitor from '../../assets/images/projects/reddit-monitor.jpg';
-import BarcodeGenerator from '../../assets/images/projects/barcode-generator.jpg';
-import PyCrawler from '../../assets/images/projects/PyCrawler.jpg';
-import BCBHLaw from '../../assets/images/projects/bcbh-law.jpg';
-import VACalc from '../../assets/images/projects/VA-Rating-Calculator.jpg';
+import MesoGuide from '../../assets/images/projects/Mesothelioma-Guide.png';
+import CCLA from '../../assets/images/projects/ccla.png';
+import RedditMonitor from '../../assets/images/projects/reddit-monitor.png';
+import BarcodeGenerator from '../../assets/images/projects/barcode-generator.png';
+import PyCrawler from '../../assets/images/projects/PyCrawler.png';
+import BCBHLaw from '../../assets/images/projects/bcbh-law.png';
+import VACalc from '../../assets/images/projects/VA-Rating-Calculator.png';
 import EverytownUSA from '../../assets/images/projects/Everytown-USA.jpg';
-import CCSearch from '../../assets/images/projects/cancer-center-search.jpg';
-import TechBlog from '../../assets/images/projects/tech-blog.jpg';
+import CCSearch from '../../assets/images/projects/cancer-center-search.png';
+import TechBlog from '../../assets/images/projects/tech-blog.png';
 
 import newTab from "../../assets/images/new-tab.svg";
 import GitHub from '../../assets/images/github-white.svg'
@@ -122,7 +122,7 @@ const ProjectCard = ({ image, title, description, link, icon, altText }) => (
       <div className="overlay-text">
         <h3>{title}</h3>
         <p>{description}</p>
-        <img src={icon} alt={altText} width="35" height="35" />
+        <img src={icon} alt={altText} width="35" height="35" loading="lazy"/>
       </div>
     </a>
   </div>
