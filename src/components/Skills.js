@@ -46,14 +46,14 @@ const Skills = () => {
                     viewport={{ once: true, amount: 0.1 }}
                 >
                     <div className="logo-container">
-                        <img src={HTML} alt="HTML 5 logo" width="" height="" />
-                        <img src={CSS} alt="CSS 3 logo" width="" height="" />
-                        <img src={JavaScript} alt="JavaScript logo" width="" height="" />
-                        <img src={jQuery} alt="jQuery Logo" width="" height="" />
-                        <img src={react} alt="react logo" width="" height="" />
-                        <img src={node} alt="node logo" width="" height="" />
-                        <img src={python} alt="python logo" width="" height="" />
-                        <img src={php} alt="php logo" width="" height="" />
+                        <img src={HTML} alt="HTML 5 logo" width="25" height="29" />
+                        <img src={CSS} alt="CSS 3 logo" width="25" height="29" />
+                        <img src={JavaScript} alt="JavaScript logo" width="29" height="29" />
+                        <img src={jQuery} alt="jQuery Logo" width="32" height="29" />
+                        <img src={react} alt="react logo" width="25" height="29" />
+                        <img src={node} alt="node logo" width="25" height="29" />
+                        <img src={python} alt="python logo" width="29" height="29" />
+                        <img src={php} alt="php logo" width="42" height="29" />
                     </div>
                     <h3>Languages & Frameworks</h3>
                     <p>I have experience with a variety of web development technologies, both front-end and back-end, enabling me to build dynamic, responsive, and full-stack applications.</p>
@@ -68,12 +68,12 @@ const Skills = () => {
                     viewport={{ once: true, amount: 0.2 }}
                 >
                         <div className="logo-container">
-                            <img src={wordpress} alt="WordPress logo" width="" height="" loading="lazy" />
-                            <img src={woocommerce} alt="WooCommerce logo" width="" height="" loading="lazy" />
-                            <img src={github} alt="Github logo" width="" height="" loading="lazy" />
-                            <img src={hugo} alt="hugo logo" width="" height="" loading="lazy" />
-                            <img src={cloudflare} alt="Cloudflare logo" width="" height="" loading="lazy" />
-                            <img src={nitropack} alt="NitroPack logo" width="" height="" loading="lazy" />
+                            <img src={wordpress} alt="WordPress logo" width="29" height="29" loading="lazy" />
+                            <img src={woocommerce} alt="WooCommerce logo" width="48" height="29" loading="lazy" />
+                            <img src={github} alt="Github logo" width="29" height="29" loading="lazy" />
+                            <img src={hugo} alt="hugo logo" width="25" height="29" loading="lazy" />
+                            <img src={cloudflare} alt="Cloudflare logo" width="29" height="29" loading="lazy" />
+                            <img src={nitropack} alt="NitroPack logo" width="43" height="29" loading="lazy" />
                         </div>
                         <h3>CMS & Tools</h3>
                         <p>I leverage a variety of content management systems (CMS) and tools to streamline development, enhance workflow efficiency, and optimize web performance.</p>
@@ -87,32 +87,32 @@ const Skills = () => {
                     viewport={{ once: true, amount: 0.5 }}
                 >
                         <div className="logo-container">
-                            <img src={aws} alt="AWS logo" width="" height="" loading="lazy" />
-                            <img src={ec2} alt="ec2 logo" width="" height="" loading="lazy" />
-                            <img src={lightsail} alt="Lightsail logo" width="" height="" loading="lazy" />
-                            <img src={s3} alt="S3 Bucket logo" width="" height="" loading="lazy" />
-                            <img src={rds} alt="RDS logo" width="" height="" loading="lazy" />
-                            <img src={cloudfront} alt="Cloudfront logo" width="" height="" loading="lazy" />
+                            <img src={aws} alt="AWS logo" width="49" height="29" loading="lazy" />
+                            <img src={ec2} alt="ec2 logo" width="29" height="29" loading="lazy" />
+                            <img src={lightsail} alt="Lightsail logo" width="29" height="29" loading="lazy" />
+                            <img src={s3} alt="S3 Bucket logo" width="29" height="29" loading="lazy" />
+                            <img src={rds} alt="RDS logo" width="25" height="29" loading="lazy" />
+                            <img src={cloudfront} alt="Cloudfront logo" width="24" height="29" loading="lazy" />
                         </div>
                         <h3>SEO</h3>
                         <p>I have experience in optimizing websites to improve their search engine visibility, user experience, and overall performance.</p>
                         <p className='skills-used'>Technical SEO, Schemas, SEMrush, Ahrefs, GA, Screaming Frog, GSC</p>
                     </motion.div>
                     <motion.div
-                    className="skill"
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: .4 }}
-                    viewport={{ once: true, amount: 0.7 }}
-                >
+                        className="skill"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: .4 }}
+                        viewport={{ once: true, amount: 0.7 }}
+                    >
                         <div className="logo-container">
-                            <img src={ga4} alt="GA4 logo" width="" height="" loading="lazy" />
-                            <img src={gsc} alt="Google Search Console logo" width="" height="" loading="lazy" />
-                            <img src={screamingfrog} alt="Screaming Frog logo" width="" height="" loading="lazy" />
-                            <img src={jsonld} alt="json-ld logo" width="" height="" loading="lazy" />
-                            <img src={googleads} alt="GoogleAds logo" width="" height="" loading="lazy" />
-                            <img src={semrush} alt="Semrush logo" width="" height="" loading="lazy" />
-                            <img src={ahrefs} alt="ahrefs logo" width="" height="" loading="lazy" />
+                            <img src={ga4} alt="GA4 logo" width="26" height="29" loading="lazy" />
+                            <img src={gsc} alt="Google Search Console logo" width="32" height="29" loading="lazy" />
+                            <img src={screamingfrog} alt="Screaming Frog logo" width="29" height="29" loading="lazy" />
+                            <img src={jsonld} alt="json-ld logo" width="39" height="29" loading="lazy" />
+                            <img src={googleads} alt="GoogleAds logo" width="31" height="29" loading="lazy" />
+                            <img src={semrush} alt="Semrush logo" width="34" height="29" loading="lazy" />
+                            <img src={ahrefs} alt="ahrefs logo" width="38" height="29" loading="lazy" />
                         </div>
                         <h3>Cloud</h3>
                         <p>I have hands-on experience with Amazon Web Services (AWS), utilizing a range of cloud computing services to deploy, manage, and scale web applications and infrastructure efficiently.</p>
