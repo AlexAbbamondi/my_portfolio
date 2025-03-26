@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-scroll';
 
-import signature from "../assets/images/my-signature.png";
+import signature from "../assets/images/my-signature.webp";
 import Halo from './nightsky';
 import { motion } from 'framer-motion';
 

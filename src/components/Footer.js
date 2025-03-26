@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 import githubIcon from "../assets/images/github-white.svg";
 import linkedinIcon from "../assets/images/linkedin.svg";
-import signatureImage from "../assets/images/my-signature.png";
-import Logo from "../assets/images/Logo.png"
+import signatureImage from "../assets/images/my-signature.webp";
+import Logo from "../assets/images/Logo.webp"
 
 import Resume from "../assets/pdf/Web_Developer_Resume.pdf";
 

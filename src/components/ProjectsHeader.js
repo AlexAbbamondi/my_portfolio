@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 
-import Arrow from "../assets/images/up-arrow.png";
+import Arrow from "../assets/images/up-arrow.webp";
 import Resume from "../assets/pdf/Web_Developer_Resume.pdf";
-import Logo from "../assets/images/Logo.png";
+import Logo from "../assets/images/Logo.webp";
 
 const DEFAULT_OFFSET = -70;  // Default offset for most links
 const SKILLS_OFFSET = -180;  // Custom offset for the Skills link

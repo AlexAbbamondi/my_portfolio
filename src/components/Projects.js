@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import Banyan from '../assets/images/projects/Banyan-Treatment-Center.jpg.webp';
-import SanMelix from '../assets/images/projects/SanMelix.jpg';
-import MesoGuide from '../assets/images/projects/Mesothelioma-Guide.png';
-import RedditMonitor from '../assets/images/projects/reddit-monitor.png'
+import Banyan from '../assets/images/projects/Banyan-Treatment-Center.webp';
+import SanMelix from '../assets/images/projects/SanMelix.webp';
+import MesoGuide from '../assets/images/projects/Mesothelioma-Guide.webp';
+import RedditMonitor from '../assets/images/projects/reddit-monitor.webp'
 
 import newTab from "../assets/images/new-tab.svg";
 import GitHub from '../assets/images/github-white.svg'

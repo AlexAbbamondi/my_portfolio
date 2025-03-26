@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import Arrow from "../assets/images/up-arrow.png";
+import Arrow from "../assets/images/up-arrow.webp";
 import Resume from "../assets/pdf/Web_Developer_Resume.pdf";
-import Logo from "../assets/images/Logo.png";
+import Logo from "../assets/images/Logo.webp";
 
 const StyledHeader = styled.header`
   background-color: ${(props) => (props.isspecificpage ? 'var(--hero-navbar-bg)' : '')};

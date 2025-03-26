@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
 import ProjectsSection from './ProjectsPageStyle';
 
-import Banyan from '../../assets/images/projects/Banyan-Treatment-Center.jpg.webp';
-import SanMelix from '../../assets/images/projects/SanMelix.jpg';
-import MesoGuide from '../../assets/images/projects/Mesothelioma-Guide.png';
-import CCLA from '../../assets/images/projects/ccla.png';
-import RedditMonitor from '../../assets/images/projects/reddit-monitor.png';
-import BarcodeGenerator from '../../assets/images/projects/barcode-generator.png';
-import PyCrawler from '../../assets/images/projects/PyCrawler.png';
-import BCBHLaw from '../../assets/images/projects/bcbh-law.png';
-import VACalc from '../../assets/images/projects/VA-Rating-Calculator.png';
-import EverytownUSA from '../../assets/images/projects/Everytown-USA.jpg';
-import CCSearch from '../../assets/images/projects/cancer-center-search.png';
-import TechBlog from '../../assets/images/projects/tech-blog.png';
+import Banyan from '../../assets/images/projects/Banyan-Treatment-Center.webp';
+import SanMelix from '../../assets/images/projects/SanMelix.webp';
+import MesoGuide from '../../assets/images/projects/Mesothelioma-Guide.webp';
+import CCLA from '../../assets/images/projects/ccla.webp';
+import RedditMonitor from '../../assets/images/projects/reddit-monitor.webp';
+import BarcodeGenerator from '../../assets/images/projects/barcode-generator.webp';
+import PyCrawler from '../../assets/images/projects/PyCrawler.webp';
+import BCBHLaw from '../../assets/images/projects/bcbh-law.webp';
+import VACalc from '../../assets/images/projects/VA-Rating-Calculator.webp';
+import EverytownUSA from '../../assets/images/projects/Everytown-USA.webp';
+import CCSearch from '../../assets/images/projects/cancer-center-search.webp';
+import TechBlog from '../../assets/images/projects/tech-blog.webp';
 
 import newTab from "../../assets/images/new-tab.svg";
 import GitHub from '../../assets/images/github-white.svg'
