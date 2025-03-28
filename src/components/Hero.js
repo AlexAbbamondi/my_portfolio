@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Link } from 'react-scroll';
 
 import signature from "../assets/images/my-signature.webp";
-import Halo from './nightsky';
+import Halo from './halo';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -45,7 +45,7 @@ const Hero = () => {
                     transition={{ duration: 0.5, delay: 0.9 }}
                     viewport={{ once: true, amount: 0.5 }}
                 >
-                    <img src={signature} className="signature" alt="" width="" height="" />
+                    <img src={signature} className="signature" alt="Alex Abbamondi signature" width="422" height="110" />
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}

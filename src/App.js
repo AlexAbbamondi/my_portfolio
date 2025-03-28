@@ -1,17 +1,17 @@
-import { useState } from "react";
+import React, { useState, Suspense } from "react";
 import { Routes, Route, useLocation } from 'react-router-dom';
-
-import HeaderWrapper from './components/HeaderWrapper'; // Import the HeaderWrapper
+import './App.scss';
+import HeaderWrapper from './components/HeaderWrapper';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ProjectsPage from './components/pages/ProjectsPage';
-import PrivacyPolicy from './components/pages/PrivacyPolicyPage';
+import ErrorBoundary from './components/ErrorBoundary'; 
 
-import './App.scss';
+const ProjectsPage = React.lazy(() => import('./components/pages/ProjectsPage'));
+const PrivacyPolicy = React.lazy(() => import('./components/pages/PrivacyPolicyPage'));
 
 function App() {
   const [isBlurred, setIsBlurred] = useState(false);
@@ -55,8 +55,20 @@ function App() {
               <Contact />
             </>
           } />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/projects" element={
+            <Suspense fallback={<div>Loading Projects Page...</div>}>
+              <ErrorBoundary>
+                <ProjectsPage />
+              </ErrorBoundary>
+            </Suspense>
+          } />
+          <Route path="/privacy-policy" element={
+            <Suspense fallback={<div>Loading Privacy Policy...</div>}>
+              <ErrorBoundary>
+                <PrivacyPolicy />
+              </ErrorBoundary>
+            </Suspense>
+          } />
         </Routes>
       </main>
       <Footer navLinks={getNavLinks()} />

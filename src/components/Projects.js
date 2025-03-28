@@ -17,7 +17,7 @@ const projectData = [
     image: MesoGuide,
     title: "Mesothelioma Guide",
     description: "Asbestos-related cancer treatment and support provider...",
-    link: "",
+    link: "https://www.mesotheliomaguide.com/",
     icon: newTab,
     altText: "New Tab Icon"
   },

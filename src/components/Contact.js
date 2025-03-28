@@ -46,13 +46,13 @@ const Contact = () => {
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         form.current,
-        process.env.REACT_APP_KEY // Directly use the public key here
+        process.env.REACT_APP_KEY
       )
       .then(
         () => {
           setFormData({ user_name: '', user_email: '', message: '' });
           setErrors('');
-          setIsSubmitted(true); // Set isSubmitted to true on successful submission
+          setIsSubmitted(true);
         },
         (error) => {
           setErrors('Something went wrong. Please try again later.');

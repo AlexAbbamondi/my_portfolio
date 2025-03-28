@@ -1,203 +1,204 @@
+@use './variables' as *;
+
 .job-flex-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .job-title-flex {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    width: 100%;
-    max-width: 590px;
-  }
-  
-  .job {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .job h3 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.job-title-flex {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  max-width: 590px;
+}
+
+.job {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
     font-size: 20px;
     margin-bottom: 0;
   }
-  
-  .job p {
+
+  p {
     font-size: 16px;
     font-style: italic;
     opacity: 0.7;
   }
-  
-  .job-description-list {
-    margin-top: 12px;
-    margin-left: 4rem;
-    padding-left: 34px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    overflow: hidden;
-    max-height: 0;
-    opacity: 0;
-    transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
-  }
-  
-  .job.open .job-description-list {
-    max-height: 1000px; /* or adjust according to your largest content */
+
+  &.open .job-description-list {
+    max-height: 1000px;
     opacity: 1;
   }
 
-  .job-description-list li {
+  &.open .job-title-number p {
+    color: $secondary-accent-color;
+  }
+}
+
+.job-description-list {
+  margin-top: 12px;
+  margin-left: 4rem;
+  padding-left: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
+
+  li {
     position: relative;
+
+    &:after {
+      content: url('../assets/images/chevron-double-regular.svg');
+      position: absolute;
+      left: -30px;
+      top: 2px;
+      width: 20px;
+      height: auto;
+    }
   }
-  
-  .job-description-list li:after {
-    content: url('../assets/images/chevron-double-regular.svg');
-    position: absolute;
-    left: -30px;
-    top: 2px;
-    width: 20px;
-    height: auto;
-  }
-  
-  .job-title-number p {
+}
+
+.job-title-number {
+  p {
     font-size: 40px;
-    color: var(--accent-color);
+    color: $accent-color;
     transition: 0.4s ease-in-out;
   }
+}
 
-  .job.open .job-title-number p {
-    color: var(--secondary-accent-color);
-  }
-  
-  .job-accordian-icon-container {
-    position: relative;
-    height: 40px;
-    width: 40px;
-    left: -10px;
-  }
-  
-  .job-accordian-icon {
-    position: absolute;
-    border: 1px solid var(--accent-color);
-    border-radius: 50%;
-    padding: 12px 6px 3px 7px;
-    transition: 0.6s ease-in-out;
-  }
-  
-  .job-accordian-icon .bar {
+.job-accordian-icon-container {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  left: -10px;
+}
+
+.job-accordian-icon {
+  position: absolute;
+  border: 1px solid $accent-color;
+  border-radius: 50%;
+  padding: 12px 6px 3px 7px;
+  transition: 0.6s ease-in-out;
+
+  .bar {
     width: 25px;
     height: 3px;
-    background-color: var(--accent-color);
+    background-color: $accent-color;
     margin: 6px 0;
     transition: 0.6s ease-in-out;
     transform-origin: center center;
+
+    &:nth-child(1) {
+      transform: rotate(-90deg);
+    }
+
+    &:nth-child(2) {
+      transform: rotate(0deg) translate(0, -9px);
+    }
   }
 
-  .job-accordian-icon.open .bar {
-    background-color: var(--secondary-accent-color);
+  &.open {
+    border-color: $secondary-accent-color;
 
-  }
+    .bar {
+      background-color: $secondary-accent-color;
 
-  .job-accordian-icon.open {
-    border-color: var(--secondary-accent-color);
+      &:nth-child(1) {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
 
-  }
-  
-  .job-accordian-icon.open .bar:nth-child(1) {
-    transform: rotate(0deg);
-  }
-  
-  .job-accordian-icon .bar:nth-child(1) {
-    transform: rotate(-90deg);
-  }
-  
-  .job-accordian-icon .bar:nth-child(2) {
-    transform: rotate(0deg) translate(0, -9px);
-  }
-  
-  .job-title-name {
-    width: 16rem;
-  }
-  
-  .job-title-name h3,
-  .job-title-name span {
+.job-title-name {
+  width: 16rem;
+
+  h3,
+  span {
     display: inline-block;
   }
-  
-  @media screen and (min-width: 360px) {
-    .job-description-list {
-      margin-left: 3.5rem;
-    }
+}
+
+@media screen and (min-width: 360px) {
+  .job-description-list {
+    margin-left: 3.5rem;
   }
-  
-  @media screen and (min-width: 600px) {
-    .job-title-flex {
-      gap: 0;
-      justify-content: space-between; 
-    }
-  
-    .job-accordian-icon-container {
-      left: 5px;
-    }
-  
-    .job-title-number {
-      width: 77px;
-    }
-  
-    .job-title-number p {
+}
+
+@media screen and (min-width: 600px) {
+  .job-title-flex {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .job-accordian-icon-container {
+    left: 5px;
+  }
+
+  .job-title-number {
+    width: 77px;
+
+    p {
       font-size: 60px;
     }
-  
-    .job-title-name {
-      width: 450px;
-    }
-  
-    .job {
-      align-items: flex-start; /* Align text to start for better readability */
-    }
-  
+  }
+
+  .job-title-name {
+    width: 450px;
+  }
+
+  .job {
+    align-items: flex-start;
+
     .job-description-list {
       margin-left: 5.5rem;
     }
-  
+
     .job-title-name h3 {
       margin-right: 5px;
     }
   }
-  
-  @media screen and (min-width: 1000px) {
-    .job-title-flex {
-      gap: 20px;
-      max-width: 625px;
-      justify-content: center;
-    }
-  
-    .job-accordian-icon-container {
-      left: 30px;
-    }
-  
-    .job-flex-container {
-      margin: 0 90px;
-    }
-  
-    .job-description-list {
-      margin-left: 5.75rem;
-    }
+}
 
-    .job-accordian-icon:hover {
-      border-color: var(--secondary-accent-color);
-    }
-  
-    .job-accordian-icon,
-    .job-accordian-icon .bar,
-    .job-accordian-icon:hover,
-    .job-accordian-icon:hover .bar {
-      transition: 0.7s;
-    }
-  
-    .job-accordian-icon:hover .bar {
-      background-color: var(--secondary-accent-color);
-    }
+@media screen and (min-width: 1000px) {
+  .job-title-flex {
+    gap: 20px;
+    max-width: 625px;
+    justify-content: center;
   }
-  
+
+  .job-accordian-icon-container {
+    left: 30px;
+  }
+
+  .job-flex-container {
+    margin: 0 90px;
+  }
+
+  .job-description-list {
+    margin-left: 5.75rem;
+  }
+
+  .job-accordian-icon:hover {
+    border-color: $secondary-accent-color;
+  }
+
+  .job-accordian-icon,
+  .job-accordian-icon .bar,
+  .job-accordian-icon:hover,
+  .job-accordian-icon:hover .bar {
+    transition: 0.7s;
+  }
+
+  .job-accordian-icon:hover .bar {
+    background-color: $secondary-accent-color;
+  }
+}
