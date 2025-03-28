@@ -1,68 +1,72 @@
-.privacy-policy-content h1 {
-  font-size: clamp(40px, 6vw, 60px);
-  margin-bottom: 20px;
-}
-
-.privacy-policy-content h3 {
-    margin-top: 30px;
-}
-
-.privacy-policy-intro {
-    margin-bottom:40px;
-}
-
-.personal-information-h3 {
-    margin-top: 0;
-}
+@use './variables' as *;
 
 .privacy-policy-content {
   max-width: 1200px;
   margin: auto;
   padding: 100px 15px 50px 15px;
-}
 
-.privacy-policy-content p {
-  margin-bottom: 18px;
-}
+  h1 {
+    font-size: clamp(40px, 6vw, 60px);
+    margin-bottom: 20px;
+  }
 
-.privacy-policy-content ul {
-  margin-bottom: 18px;
-  margin-left: 3.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
+  h3 {
+    margin-top: 30px;
+  }
 
-.privacy-policy-content ul li {
-  position: relative;
-}
+  p {
+    margin-bottom: 18px;
+  }
 
-.privacy-policy-content ul li:after {
-  content: url("../assets/images/chevron-double-regular.svg");
-  position: absolute;
-  left: -30px;
-  top: 2px;
-  width: 20px;
-  height: auto;
-}
+  ul {
+    margin-bottom: 18px;
+    margin-left: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 
-.privacy-policy-content a,
-.privacy-policy-content a:hover {
-    transition: .3s;
-}
+    li {
+      position: relative;
 
-.privacy-policy-content a {
-    color: var(--secondary-accent-color);
+      &:after {
+        content: url("../assets/images/chevron-double-regular.svg");
+        position: absolute;
+        left: -30px;
+        top: 2px;
+        width: 20px;
+        height: auto;
+      }
+    }
+  }
+
+  a,
+  &:hover {
+    transition: 0.3s;
+  }
+
+  a {
+    color: $secondary-accent-color;
     text-decoration: underline;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
 }
 
-.privacy-policy-content a:hover {
-    color: var(--accent-color);
+.privacy-policy-intro {
+  margin-bottom: 40px;
 }
 
+.personal-information-h3 {
+  margin-top: 0;
+}
 
 @media screen and (min-width: 1000px) {
-    .privacy-policy-content ul {
-        margin-left: 4rem;
+  .privacy-policy-content {
+    
+    ul {
+      margin-left: 4rem;
     }
+  }
 }

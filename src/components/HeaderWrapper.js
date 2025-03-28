@@ -6,12 +6,12 @@ import ProjectHeader from './ProjectsHeader';
 const HeaderWrapper = ({ onToggle, showNavbar }) => {
     const location = useLocation();
 
-    // Use useEffect to detect location change and close the navbar
     useEffect(() => {
         if (showNavbar) {
             onToggle();
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [location.pathname]);
 
     return (

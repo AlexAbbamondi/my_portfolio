@@ -68,14 +68,14 @@ const Header = ({ onToggle, showNavbar }) => {
         <nav className={`navbar ${showNavbar ? 'active' : ''}`}>
           <ul className="nav-links">
             {navLinks.map((link, index) => (
-              <motion.div
-                key={link.to} // Added key prop here
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                viewport={{ once: true, amount: 0.5 }}
-              >
-                <li>
+
+                <motion.li
+                  key={link.to} // Added key prop here
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                >
                   <ScrollLink
                     activeClass="active"
                     to={link.to}
@@ -87,8 +87,8 @@ const Header = ({ onToggle, showNavbar }) => {
                   >
                     {link.to}
                   </ScrollLink>
-                </li>
-              </motion.div>
+                </motion.li>
+
             ))}
             <motion.li
               initial={{ opacity: 0, x: -50 }}

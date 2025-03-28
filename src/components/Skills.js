@@ -46,14 +46,14 @@ const Skills = () => {
                     viewport={{ once: true, amount: 0.1 }}
                 >
                     <div className="logo-container">
-                        <img src={HTML} alt="HTML 5 logo" width="25" height="29" />
-                        <img src={CSS} alt="CSS 3 logo" width="25" height="29" />
-                        <img src={JavaScript} alt="JavaScript logo" width="29" height="29" />
-                        <img src={jQuery} alt="jQuery Logo" width="32" height="29" />
-                        <img src={react} alt="react logo" width="25" height="29" />
-                        <img src={node} alt="node logo" width="25" height="29" />
-                        <img src={python} alt="python logo" width="29" height="29" />
-                        <img src={php} alt="php logo" width="42" height="29" />
+                        <img src={HTML} alt="HTML 5 logo" width="25" height="29" loading="lazy" />
+                        <img src={CSS} alt="CSS 3 logo" width="25" height="29" loading="lazy" />
+                        <img src={JavaScript} alt="JavaScript logo" width="29" height="29" loading="lazy" />
+                        <img src={jQuery} alt="jQuery Logo" width="32" height="29" loading="lazy" />
+                        <img src={react} alt="react logo" width="25" height="29" loading="lazy" />
+                        <img src={node} alt="node logo" width="25" height="29" loading="lazy" />
+                        <img src={python} alt="python logo" width="29" height="29" loading="lazy" />
+                        <img src={php} alt="php logo" width="42" height="29" loading="lazy" />
                     </div>
                     <h3>Languages & Frameworks</h3>
                     <p>I have experience with a variety of web development technologies, both front-end and back-end, enabling me to build dynamic, responsive, and full-stack applications.</p>

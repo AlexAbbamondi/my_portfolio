@@ -21,7 +21,7 @@ const Footer = ({ navLinks }) => {
 
   const scrollWithOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -100; // Adjust the offset value as needed
+    const yOffset = -100;
     window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
   };
 
@@ -51,7 +51,7 @@ const Footer = ({ navLinks }) => {
               spy={true}
               smooth={true}
               duration={1000}
-              offset={-70} // Offset can be adjusted based on your layout
+              offset={-70}
             >
               <img src={Logo} alt="Logo" width="150" height="150" loading="lazy" />
             </ScrollLink>

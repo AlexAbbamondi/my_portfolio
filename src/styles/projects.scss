@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 .projects-flex-container {
   display: flex;
   flex-direction: column;
@@ -19,6 +21,10 @@
   background-size: cover;
   background-position: center;
   cursor: pointer;
+
+  &:hover .overlay-text {
+    opacity: 1;
+  }
 }
 
 .hover-image {
@@ -43,60 +49,61 @@
   gap: 10px;
   opacity: 1;
   padding: 0 20px;
+
+  h3 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  p {
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+  }
 }
 
-.overlay-text h3 {
-  color: #fff;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.2;
-  margin-bottom: 0;
-  text-align: center;
-}
+.projects-text-container {
+  p {
+    margin-bottom: 18px;
+  }
 
-.overlay-text p {
-  color: #fff;
-  font-weight: 400;
-  text-align: center;
-}
-
-.projects-text-container p {
-  margin-bottom: 18px;
-}
-
-.projects-text-container a,
-.projects-text-container a:hover {
-  transition: 0.3s;
+  a,
+  &:hover {
+    transition: 0.3s;
+  }
 }
 
 .projects-page-link-container {
   width: fit-content;
-}
 
-.projects-page-link-container a {
-  color: var(--secondary-accent-color);
-  font-size: 18px;
-  font-weight: 500;
-  text-decoration: none; /* Remove default underline */
-  background-image: linear-gradient(
-    to bottom,
-    var(--secondary-accent-color) 0%,
-    var(--secondary-accent-color) 100%
-  );
-  background-position: 0 100%; /* Keep the gradient at the bottom */
-  background-repeat: repeat-x;
-  background-size: 100% 2px; /* Ensure the gradient is only 2px high */
-  transition: color 0.05s, background-image 0.3s ease;
-}
+  a {
+    color: $secondary-accent-color;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    background-image: linear-gradient(
+      to bottom,
+      $secondary-accent-color 0%,
+      $secondary-accent-color 100%
+    );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 100% 2px;
+    transition: color 0.05s, background-image 0.3s ease;
 
-.projects-page-link-container a:hover {
-  color: var(--accent-color); /* Change text color */
-  transition: color 0.05s, background-image 0.3s ease;
-  background-image: linear-gradient(
-    to bottom,
-    var(--accent-color) 0%,
-    var(--accent-color) 100%
-  ); /* Change gradient color */
+    &:hover {
+      color: $accent-color;
+      background-image: linear-gradient(
+        to bottom,
+        $accent-color 0%,
+        $accent-color 100%
+      );
+    }
+  }
 }
 
 .projects-content {
@@ -105,20 +112,8 @@
   gap: 30px;
 }
 
-
-
-// @media screen and (min-width: 768px) and (max-width: 902px) {
-//   .project:last-of-type .overlay-text p {
-//       max-height: 110px;
-//       overflow: hidden;
-//       text-overflow: ellipsis;
-//       position: relative;
-//   }
-// }
-
 @media screen and (min-width: 768px) {
   .projects-content {
-    display: flex;
     gap: 0;
     justify-content: space-between;
   }
@@ -144,8 +139,5 @@
     opacity: 0;
     transition: opacity 0.3s ease;
   }
-
-  .project:hover .overlay-text {
-    opacity: 1;
-  }
 }
+

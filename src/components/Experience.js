@@ -64,7 +64,6 @@ const Experience = () => {
   );
 };
 
-// Consolidated Job Data
 const jobs = [
   {
     title: 'Full-Stack Web Developer',

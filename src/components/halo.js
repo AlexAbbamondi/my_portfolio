@@ -30,7 +30,7 @@ const Halo = ({ myRef }) => {
     };
   }, [vantaEffect, myRef]);
 
-  return null; // No additional JSX needed here; handled by ref
+  return null;
 };
 
 export default Halo;

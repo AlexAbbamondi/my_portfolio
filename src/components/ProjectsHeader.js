@@ -5,14 +5,14 @@ import Arrow from "../assets/images/up-arrow.webp";
 import Resume from "../assets/pdf/Web_Developer_Resume.pdf";
 import Logo from "../assets/images/Logo.webp";
 
-const DEFAULT_OFFSET = -70;  // Default offset for most links
-const SKILLS_OFFSET = -180;  // Custom offset for the Skills link
+const DEFAULT_OFFSET = -70;
+const SKILLS_OFFSET = -180;
 
 const jumpToSectionWithOffset = (el, offset) => {
     const elementPosition = el.getBoundingClientRect().top + window.scrollY;
     const offsetPosition = elementPosition + offset;
 
-    window.scrollTo(0, offsetPosition); // Instantly jump to the section with the offset
+    window.scrollTo(0, offsetPosition);
 };
 
 const ProjectHeader = ({ onToggle, showNavbar }) => {
@@ -45,7 +45,7 @@ const ProjectHeader = ({ onToggle, showNavbar }) => {
                             <Link 
                                 to="/#Skills" 
                                 className="home-link"
-                                scroll={(el) => jumpToSectionWithOffset(el, SKILLS_OFFSET)} // Custom offset for Skills
+                                scroll={(el) => jumpToSectionWithOffset(el, SKILLS_OFFSET)}
                             >
                                 Skills
                             </Link>
@@ -54,7 +54,7 @@ const ProjectHeader = ({ onToggle, showNavbar }) => {
                             <Link 
                                 to="/#Experience" 
                                 className="home-link"
-                                scroll={(el) => jumpToSectionWithOffset(el, DEFAULT_OFFSET)} // Default offset
+                                scroll={(el) => jumpToSectionWithOffset(el, DEFAULT_OFFSET)}
                             >
                                 Experience
                             </Link>
@@ -63,7 +63,7 @@ const ProjectHeader = ({ onToggle, showNavbar }) => {
                             <Link 
                                 to="/#Projects" 
                                 className="home-link"
-                                scroll={(el) => jumpToSectionWithOffset(el, DEFAULT_OFFSET)} // Default offset
+                                scroll={(el) => jumpToSectionWithOffset(el, DEFAULT_OFFSET)}
                             >
                                 Projects
                             </Link>
@@ -72,7 +72,7 @@ const ProjectHeader = ({ onToggle, showNavbar }) => {
                             <Link 
                                 to="/#Contact" 
                                 className="home-link"
-                                scroll={(el) => jumpToSectionWithOffset(el, DEFAULT_OFFSET)} // Default offset
+                                scroll={(el) => jumpToSectionWithOffset(el, DEFAULT_OFFSET)}
                             >
                                 Contact
                             </Link>

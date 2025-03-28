@@ -1,5 +1,7 @@
+@use './variables' as *;
+
 footer {
-  background-color: var(--hero-navbar-bg);
+  background-color: $hero-navbar-bg;
 }
 
 .footer-container {
@@ -13,30 +15,65 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 25px 0;
-}
 
-.upper-footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  order: 2;
-}
+  &-left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    order: 2;
 
-.upper-footer-middle {
-  order: 1;
-  margin: 0 auto 15px auto;
-}
+    p {
+      max-width: 300px;
+    }
 
-.upper-footer-middle img {
-  cursor: pointer;
-}
+    .button {
+      width: fit-content;
+    }
+  }
 
-.upper-footer-left p {
-  max-width: 300px;
-}
+  &-middle {
+    order: 1;
+    margin: 0 auto 15px auto;
 
-.upper-footer-left .button {
-  width: fit-content;
+    img {
+      cursor: pointer;
+    }
+  }
+
+  &-right {
+    margin-top: 15px;
+    order: 3;
+    width: 300px;
+
+    nav {
+      display: flex;
+      gap: 12px;
+
+      p {
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      ul {
+        padding-left: 0;
+
+        li {
+          display: flex;
+          font-size: 16px;
+          color: $light-text;
+          margin-bottom: 0;
+          gap: 12px;
+        }
+      }
+    }
+  }
+
+  p {
+    font-size: 16px;
+    color: $light-text;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
 }
 
 .lower-footer {
@@ -44,62 +81,33 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  border-top: 1px solid var(--light-text);
-}
+  border-top: 1px solid $light-text;
 
-.lower-footer-left {
-  order: 2;
-}
+  &-left {
+    order: 2;
 
-.lower-footer-left a,
-.lower-footer-left a:hover {
-  transition: 0.3s;
-}
+    a,
+    &:hover {
+      transition: 0.3s;
+    }
 
-.lower-footer-left a:hover {
-  color: var(--secondary-accent-color);
-}
+    &:hover {
+      color: $secondary-accent-color;
+    }
 
-.upper-footer p,
-.lower-footer-left p {
-  font-size: 16px;
-  color: var(--light-text);
-  margin-bottom: 0;
-  font-weight: 400;
-}
+    p {
+      font-size: 16px;
+      color: $light-text;
+      margin-bottom: 0;
+      font-weight: 400;
+    }
+  }
 
-.lower-footer-right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.upper-footer-right {
-  margin-top: 15px;
-  order: 3;
-  width: 300px;
-}
-
-.upper-footer-right nav {
-  display: flex;
-  gap: 12px;
-}
-
-.upper-footer-right nav p {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.upper-footer-right nav ul {
-  padding-left: 0;
-}
-
-.upper-footer-right nav ul li {
-  display: flex;
-  font-size: 16px;
-  color: var(--light-text);
-  margin-bottom: 0;
-  gap: 12px;
+  &-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -109,67 +117,63 @@ footer {
     justify-content: space-between;
     gap: 0;
     padding: 30px 20px;
-  }
 
-  .lower-footer-right {
-    order: 1;
-  }
-
-  .lower-footer-right {
-    order: 2;
+    &-right {
+      order: 2;
+    }
   }
 
   .upper-footer {
     flex-direction: row;
     justify-content: center;
-  }
 
-  .upper-footer-left {
-    order: 1;
-    width: 33.3%;
-  }
+    &-left {
+      order: 1;
+      width: 33.3%;
+    }
 
-  .upper-footer-middle {
-    display: flex;
-    justify-content: center;
-    order: 2;
-    width: 33.3%;
-    margin: 0;
-  }
+    &-middle {
+      display: flex;
+      justify-content: center;
+      order: 2;
+      width: 33.3%;
+      margin: 0;
+    }
 
-  .upper-footer-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 33.3%;
-  }
+    &-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 33.3%;
 
-  .upper-footer-right nav {
-    width: 100px;
-    display: block;
-  }
+      nav {
+        width: 100px;
+        display: block;
 
-  .upper-footer-right nav p {
-    padding-bottom: 7px;
-    font-size: 18px;
-  }
+        p {
+          padding-bottom: 7px;
+          font-size: 18px;
+        }
 
-  .upper-footer-right nav ul {
-    padding-left: 20px;
-  }
+        ul {
+          padding-left: 20px;
 
-  .upper-footer-right nav ul li {
-    flex-direction: column;
-    gap: 10px;
-  }
+          li {
+            flex-direction: column;
+            gap: 10px;
 
-  .upper-footer-right nav ul li a {
-    cursor: pointer;
-    transition: 0.3s;
-  }
+            a {
+              cursor: pointer;
+              transition: 0.3s;
 
-  .upper-footer-right nav ul li a:hover {
-    color: var(--secondary-accent-color);
-    transition: 0.3s;
+              &:hover {
+                color: $secondary-accent-color;
+                transition: 0.3s;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
