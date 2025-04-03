@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import useLazyLoadBackground from '../../utils/useLazyLoadBackground';
+
 import ProjectsSection from './ProjectsPageStyle';
 
 import Banyan from '../../assets/images/projects/Banyan-Treatment-Center.webp';
@@ -116,8 +118,15 @@ const projectsData = [
   }
 ];
 
-const ProjectCard = ({ image, title, description, link, icon, altText }) => (
-  <div className="project" style={{ backgroundImage: `url(${image})` }}>
+const ProjectCard = ({ image, title, description, link, icon, altText }) => {
+  const [elementRef, isLoaded] = useLazyLoadBackground();
+
+  return (
+  <div 
+  ref={elementRef}
+  className="project" 
+  style={isLoaded ? { backgroundImage: `url(${image})` } : {}}
+  >
     <a href={link} target="_blank" rel='noreferrer noopener'>
       <div className="overlay-text">
         <h3>{title}</h3>
@@ -127,6 +136,7 @@ const ProjectCard = ({ image, title, description, link, icon, altText }) => (
     </a>
   </div>
 );
+};
 
 const ProjectsPage = () => {
   useEffect(() => {

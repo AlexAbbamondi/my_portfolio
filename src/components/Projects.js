@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import useLazyLoadBackground from '../utils/useLazyLoadBackground';
 
 import Banyan from '../assets/images/projects/Banyan-Treatment-Center.webp';
 import SanMelix from '../assets/images/projects/SanMelix.webp';
 import MesoGuide from '../assets/images/projects/Mesothelioma-Guide.webp';
-import RedditMonitor from '../assets/images/projects/reddit-monitor.webp'
+import RedditMonitor from '../assets/images/projects/reddit-monitor.webp';
 
 import newTab from "../assets/images/new-tab.svg";
-import GitHub from '../assets/images/github-white.svg'
+import GitHub from '../assets/images/github-white.svg';
 
 import '../styles/projects.scss';
 
@@ -47,27 +48,29 @@ const projectData = [
   },
 ];
 
-const Project = ({ title, description, image, link, index, icon, altText }) => (
-  <motion.div
-    className="project"
-    style={image ? { backgroundImage: `url(${image})` } : {}}
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay: index * 0.1 }}
-    viewport={{ once: true, amount: 0.2 }}
-  >
+const Project = ({ title, description, image, link, index, icon, altText }) => {
+  const [elementRef, isLoaded] = useLazyLoadBackground();
 
-    <a href={link} target="_blank" rel='noreferrer noopener'>
-      <div className="overlay-text">
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <img src={icon} alt={altText} width="35" height="35" loading="lazy" />
-      </div>
-    </a>
-
-  </motion.div>
-);
-
+  return (
+    <motion.div
+      ref={elementRef}
+      className="project"
+      style={isLoaded ? { backgroundImage: `url(${image})` } : {}}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true, amount: 0.2 }}
+    >
+      <a href={link} target="_blank" rel='noreferrer noopener'>
+        <div className="overlay-text">
+          <h3>{title}</h3>
+          <p>{description}</p>
+          <img src={icon} alt={altText} width="35" height="35" loading="lazy" />
+        </div>
+      </a>
+    </motion.div>
+  );
+};
 
 const Projects = () => {
   return (
@@ -77,7 +80,7 @@ const Projects = () => {
           className="projects-text-container"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: .1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
           viewport={{ once: true, amount: 0.1 }}
         >
           <h2>My Recent Projects</h2>
