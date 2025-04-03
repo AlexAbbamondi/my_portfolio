@@ -45,7 +45,7 @@ const Hero = () => {
                     transition={{ duration: 0.5, delay: 0.9 }}
                     viewport={{ once: true, amount: 0.5 }}
                 >
-                    <img src={signature} className="signature" alt="Alex Abbamondi signature" width="422" height="110" />
+                    <img src={signature} className="signature" alt="Alex Abbamondi signature" width="422" height="110" loading="lazy" />
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
