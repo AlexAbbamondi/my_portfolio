@@ -20,30 +20,30 @@ import newTab from "../../assets/images/new-tab.svg";
 import GitHub from '../../assets/images/github-white.svg'
 
 const projectsData = [
-  {
-    image: MesoGuide,
-    title: "Mesothelioma Guide",
-    description: "Asbestos-related cancer treatment and support provider",
-    link: "",
-    icon: newTab,
-    altText: "New Tab Icon"
-  },
-  {
-    image: Banyan,
-    title: "Banyan Treatment Center",
-    description: "Substance abuse and mental health treatment facility",
-    link: "https://www.banyantreatmentcenter.com/",
-    icon: newTab,
-    altText: "New Tab Icon"
-  },
-  {
-    image: SanMelix,
-    title: "BeeCure",
-    description: "A skincare company offering buckwheat honey products to repair and strengthen skin",
-    link: "https://beecure.com/",
-    icon: newTab,
-    altText: "New Tab Icon"
-  },
+  // {
+  //   image: MesoGuide,
+  //   title: "Mesothelioma Guide",
+  //   description: "Asbestos-related cancer treatment and support provider",
+  //   link: "",
+  //   icon: newTab,
+  //   altText: "New Tab Icon"
+  // },
+  // {
+  //   image: Banyan,
+  //   title: "Banyan Treatment Center",
+  //   description: "Substance abuse and mental health treatment facility",
+  //   link: "https://www.banyantreatmentcenter.com/",
+  //   icon: newTab,
+  //   altText: "New Tab Icon"
+  // },
+  // {
+  //   image: SanMelix,
+  //   title: "BeeCure",
+  //   description: "A skincare company offering buckwheat honey products to repair and strengthen skin",
+  //   link: "https://beecure.com/",
+  //   icon: newTab,
+  //   altText: "New Tab Icon"
+  // },
   {
     image: BCBHLaw,
     title: "BCBH Law",
@@ -60,14 +60,14 @@ const projectsData = [
     icon: newTab,
     altText: "New Tab Icon"
   },
-  {
-    image: RedditMonitor,
-    title: "Reddit Web Scraper",
-    description: "Python script that monitors Reddit for posts containing specified keywords and sends email notifications",
-    link: "https://github.com/AlexAbbamondi/Reddit-Monitor",
-    icon: GitHub,
-    altText: "Github Icon"
-  },
+  // {
+  //   image: RedditMonitor,
+  //   title: "Reddit Web Scraper",
+  //   description: "Python script that monitors Reddit for posts containing specified keywords and sends email notifications",
+  //   link: "https://github.com/AlexAbbamondi/Reddit-Monitor",
+  //   icon: GitHub,
+  //   altText: "Github Icon"
+  // },
   {
     image: BarcodeGenerator,
     title: "UPC-A Barcode Generator",
@@ -148,14 +148,8 @@ const ProjectsPage = () => {
       <div className="projects-content">
         <div className="projects-text-container">
           <h1>Projects</h1>
-          <p>
-            I have worked on a variety of projects, including custom WordPress websites, dynamic React applications,
-            and Python-based apps for tasks like data processing and backend development.
-          </p>
-          <p>
-            My experience spans building responsive, user-friendly sites, creating interactive web apps, and
-            developing scalable solutions tailored to client needs.
-          </p>
+          <p>I have worked on a variety of projects, including custom WordPress websites, dynamic React applications, and Python-based apps for tasks like data processing and backend development.</p>
+          <p>My experience spans building responsive, user-friendly sites, creating interactive web apps, and developing scalable solutions tailored to client needs.</p>
         </div>
 
         <div className="projects-flex-container">
@@ -163,6 +157,7 @@ const ProjectsPage = () => {
             <ProjectCard key={index} {...project} />
           ))}
         </div>
+        <a href="https://github.com/AlexAbbamondi" target="_blank" rel="noopener noreferrer">View more on my GitHub ⟶</a>
       </div>
     </ProjectsSection>
   );

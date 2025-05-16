@@ -27,21 +27,14 @@ export const PrivacyPolicy = () => {
                 </ul>
                 <p> This information is used solely to respond to your inquiry and is not shared with third parties unless required by law.</p>
 
-                <h3>Automatically Collected Information</h3>
-                <p>Like many websites, this site collects information automatically when you visit, such as your IP address, browser type, and referring pages. This information is used for analytics purposes, to improve the performance and functionality of the website.</p>
-
                 <h3>How We Use Your Information</h3>
                 <p>The information collected from you may be used in the following ways:</p>
 
                 <ul>
                     <li>To respond to your inquiries or requests</li>
                     <li>To improve my website and services</li>
-                    <li>To send periodic emails, if you have opted in to receive communication</li>
                     <li>I will never sell or trade your personal information to third parties.</li>
                 </ul>
-
-                <h3>Cookies</h3>
-                <p>Cookies are small files stored on your device that help enhance your experience on the website. These cookies may store your preferences, session data, and improve website functionality. You can choose to disable cookies through your browser settings, but this may affect your experience on the site.</p>
 
                 <h3>Data Retention</h3>
                 <p>I retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy. If you no longer wish for me to retain your information, you can request its deletion by contacting me directly.</p>

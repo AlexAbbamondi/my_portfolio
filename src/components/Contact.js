@@ -73,7 +73,7 @@ const Contact = () => {
             viewport={{ once: true, amount: 0.2 }}
           >
             <h2>Let’s Collaborate to Create a Seamless, High-Performing Web Experience.</h2>
-            <p>Get in touch to discuss your project! Whether you need front-end development, responsive web design, or SEO optimization, I'’'m here to help.</p>
+            <p>Get in touch to discuss your project! Whether you need front-end development, responsive web design, or SEO optimization, I'm here to help.</p>
             <p>Fill out the form, and I'll get back to you as soon as possible. Let's bring your vision to life!</p>
           </motion.div>
 
