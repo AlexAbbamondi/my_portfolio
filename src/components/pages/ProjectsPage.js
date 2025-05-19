@@ -20,30 +20,30 @@ import newTab from "../../assets/images/new-tab.svg";
 import GitHub from '../../assets/images/github-white.svg'
 
 const projectsData = [
-  // {
-  //   image: MesoGuide,
-  //   title: "Mesothelioma Guide",
-  //   description: "Asbestos-related cancer treatment and support provider",
-  //   link: "",
-  //   icon: newTab,
-  //   altText: "New Tab Icon"
-  // },
-  // {
-  //   image: Banyan,
-  //   title: "Banyan Treatment Center",
-  //   description: "Substance abuse and mental health treatment facility",
-  //   link: "https://www.banyantreatmentcenter.com/",
-  //   icon: newTab,
-  //   altText: "New Tab Icon"
-  // },
-  // {
-  //   image: SanMelix,
-  //   title: "BeeCure",
-  //   description: "A skincare company offering buckwheat honey products to repair and strengthen skin",
-  //   link: "https://beecure.com/",
-  //   icon: newTab,
-  //   altText: "New Tab Icon"
-  // },
+  {
+    image: MesoGuide,
+    title: "Mesothelioma Guide",
+    description: "Asbestos-related cancer treatment and support provider",
+    link: "",
+    icon: newTab,
+    altText: "New Tab Icon"
+  },
+  {
+    image: Banyan,
+    title: "Banyan Treatment Center",
+    description: "Substance abuse and mental health treatment facility",
+    link: "https://www.banyantreatmentcenter.com/",
+    icon: newTab,
+    altText: "New Tab Icon"
+  },
+  {
+    image: SanMelix,
+    title: "BeeCure",
+    description: "A skincare company offering buckwheat honey products to repair and strengthen skin",
+    link: "https://beecure.com/",
+    icon: newTab,
+    altText: "New Tab Icon"
+  },
   {
     image: BCBHLaw,
     title: "BCBH Law",
@@ -60,14 +60,14 @@ const projectsData = [
     icon: newTab,
     altText: "New Tab Icon"
   },
-  // {
-  //   image: RedditMonitor,
-  //   title: "Reddit Web Scraper",
-  //   description: "Python script that monitors Reddit for posts containing specified keywords and sends email notifications",
-  //   link: "https://github.com/AlexAbbamondi/Reddit-Monitor",
-  //   icon: GitHub,
-  //   altText: "Github Icon"
-  // },
+  {
+    image: RedditMonitor,
+    title: "Reddit Web Scraper",
+    description: "Python script that monitors Reddit for posts containing specified keywords and sends email notifications",
+    link: "https://github.com/AlexAbbamondi/Reddit-Monitor",
+    icon: GitHub,
+    altText: "Github Icon"
+  },
   {
     image: BarcodeGenerator,
     title: "UPC-A Barcode Generator",
@@ -108,14 +108,14 @@ const projectsData = [
     icon: newTab,
     altText: "New Tab Icon"
   },
-  {
-    image: TechBlog,
-    title: "MVC Tech Blog",
-    description: "This Node.js app with Express lets logged in users view, create, edit, delete, and comment on blog posts",
-    link: "https://github.com/AlexAbbamondi/MVC-Tech-Blog",
-    icon: GitHub,
-    altText: "Github Icon"
-  }
+  // {
+  //   image: TechBlog,
+  //   title: "MVC Tech Blog",
+  //   description: "This Node.js app with Express lets logged in users view, create, edit, delete, and comment on blog posts",
+  //   link: "https://github.com/AlexAbbamondi/MVC-Tech-Blog",
+  //   icon: GitHub,
+  //   altText: "Github Icon"
+  // }
 ];
 
 const ProjectCard = ({ image, title, description, link, icon, altText }) => {
